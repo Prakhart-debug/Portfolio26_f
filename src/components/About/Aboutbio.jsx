@@ -11,12 +11,12 @@ const Aboutbio = () => {
       </p>
       <p className='mx-auto mb-4 w-5/6 lg:mx-auto'>
         I'm at my happiest when I'm learning, creating, and finding smarter and more logical ways to solve problems.
-        I love collaborating with teammates, diving into engineering topics — whether it's aviation, motorsports, or
-        technology — and occasionally attempting to shred a rock solo on my guitar.
+        I love collaborating with teammates, diving into engineering topics, whether it's aviation, motorsports, or
+        technology, and occasionally attempting to shred a rock solo on my guitar.
       </p>
       <p className='mx-auto w-5/6 md:text-2xl lg:mx-auto'>
-        I'm Prax, half engineer, half problem solver, full-time enthusiast for building cool things —
-        whether it's fullstack, Machine Learning, Data Science, or anything in between.
+        I'm Prax, half engineer, half problem solver, full-time enthusiast for building cool things,
+        whether it's Fullstack, Machine Learning, Data Science, or anything in between XD .
       </p>
     </div>
   )
