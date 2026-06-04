@@ -1,0 +1,14 @@
+[build]
+  # Command to build your project
+  command = "npm run build"
+
+  # Directory that gets published to Netlify (for React/Vite usually "dist", for CRA it's "build")
+  publish = "dist"
+
+  # Correct Git reference (no stray brace!)
+  GIT_REFERENCE = "refs/heads/main"
+
+
+[build.environment]
+  NODE_VERSION = "18.19.0"
+

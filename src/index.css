@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* DARK MODE (default) */
+    --text-primary: #f3f3f3;
+    --text-accent: #ffc466;
+    --text-inverted: #191919;
+
+    --color-bg: #191919;
+    --color-bg-trans: #191919dc;
+    --color-bg-muted: #2e2e2e;
+    --color-bg-card: #222222;
+    --color-muted: #818181;
+    --color-muted-text: #f3f3f3a6;
+    --color-accent: #f68058;
+    --color-glow: #ffd48e;
+    --color-accent-main: #ffc466;
+    --color-accent-mute: #f7c474;
+    --color-border: rgba(255, 196, 102, 0.18);
+    --color-border-subtle: rgba(255,255,255,0.07);
+  }
+
+  [data-theme="light"] {
+    --text-primary: #1a1714;
+    --text-accent: #c9720a;
+    --text-inverted: #f8f5f0;
+
+    --color-bg: #f8f5f0;
+    --color-bg-trans: #f8f5f0dc;
+    --color-bg-muted: #ede9e2;
+    --color-bg-card: #ffffff;
+    --color-muted: #7a6f65;
+    --color-muted-text: #1a1714a6;
+    --color-accent: #c9520a;
+    --color-glow: #c97a0a;
+    --color-accent-main: #c9720a;
+    --color-accent-mute: #d4822a;
+    --color-border: rgba(201, 114, 10, 0.22);
+    --color-border-subtle: rgba(0,0,0,0.08);
+  }
+
+  @font-face {
+    font-family: 'BiteChalk';
+    src: url('/BiteChalk.ttf');
+  }
+  @font-face {
+    font-family: 'BiteChalkNormal';
+    src: url('/BiteChalkNormal.ttf');
+  }
+  @font-face {
+    font-family: 'HandcraftChalkRegular';
+    src: url('/HandcraftChalkRegular.ttf');
+  }
+  @font-face {
+    font-family: 'LordishRegular';
+    src: url('/LordishRegular.ttf');
+  }
+  @font-face {
+    font-family: 'acdc';
+    src: url('/squealer.ttf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'namefont';
+    src: url('/namefont.ttf');
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1 {
+    text-shadow: 2px -2px 0 #000, -2px -2px 0 #000, 3px -2px 0 #000, -2px 2px 0 #000;
+  }
+}
