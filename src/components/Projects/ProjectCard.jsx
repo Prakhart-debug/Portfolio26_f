@@ -18,13 +18,13 @@ const ProjectCard = ({ name, languages, site, siteicon, repoicon, code, index, p
         transition={{ duration: 0.25 }}
         key={index}
       >
-        <span className='block px-4 pt-4 text-xl font-bold md:text-3xl text-skin-base'>{name}</span>
-        <img
-          className='mx-auto my-3 w-full border-y-4 border-mainblack object-cover'
-          style={{ maxHeight: '220px' }}
-          src={projectimg}
-          alt={name}
-        />
+       <div className='w-full h-48 bg-skin-muted overflow-hidden border-y-4 border-mainblack flex-shrink-0'>
+  <img
+    className='w-full h-full object-cover object-top'
+    src={projectimg}
+    alt={name}
+  />
+</div>
 
         <div className='mx-4 mb-4 rounded-lg border border-bordersubtle'>
           {/* Tabs */}
@@ -52,7 +52,7 @@ const ProjectCard = ({ name, languages, site, siteicon, repoicon, code, index, p
           </div>
 
           {/* Tab Content */}
-          <div className='min-h-[80px] font-paragraph'>
+          <div className='h-28 overflow-y-auto'>
             <AnimatePresence mode='wait'>
               <motion.div
                 key={activeTab}

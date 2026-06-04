@@ -27,7 +27,7 @@ const Projects = () => {
 			<h3 className='mx-auto my-10  text-6xl tracking-wider text-skin-accent lg:mb-20 lg:text-9xl'>
 				Projects
 			</h3>
-			<div className='mx-auto grid place-items-center lg:grid-cols-2 '>
+			<div className='mx-auto w-full max-w-6xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-6 items-start'>
 				{projectcard}
 			</div>
 		</div>
