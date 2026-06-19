@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import Git from '../../assets/site-icons/git.png'
 import Download from '../../assets/site-icons/download.png'
 import Linkedin from '../../assets/site-icons/linkedin.png'
-import PrakharResume from '../../../public/Prakhar Resume.pdf'
+import PrakharResume from '../../../public/resume1.pdf'
 
 const wobble = {
 	scale: [1, 1.1, 1.05, 1.1, 1],
