@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import CategoryThumb from './CategoryThumb'
 
-const ProjectCard = ({ name, languages, site, siteicon, repoicon, code, index, projectimg, projectDescription }) => {
+const ProjectCard = ({ name, languages, site, siteicon, repoicon, code, index, projectimg, projectDescription, category }) => {
   const [activeTab, setActiveTab] = useState('description')
 
   const tabs = [
@@ -19,12 +20,25 @@ const ProjectCard = ({ name, languages, site, siteicon, repoicon, code, index, p
         key={index}
       >
        <div className='w-full h-48 bg-skin-muted overflow-hidden border-y-4 border-mainblack flex-shrink-0'>
-  <img
-    className='w-full h-full object-cover object-top'
-    src={projectimg}
-    alt={name}
-  />
+  {projectimg ? (
+    <img
+      className='w-full h-full object-cover object-top'
+      src={projectimg}
+      alt={name}
+    />
+  ) : (
+    <CategoryThumb category={category} />
+  )}
 </div>
+
+        <div className='flex items-start justify-between gap-3 px-4 pt-4 pb-2'>
+          <h4 className='text-xl md:text-2xl font-paragraph text-skin-base leading-snug'>{name}</h4>
+          {category && (
+            <span className='shrink-0 mt-1 text-xxs md:text-xs px-2 py-1 rounded-full bg-skin-muted text-skin-accent border border-bordersubtle whitespace-nowrap'>
+              {category}
+            </span>
+          )}
+        </div>
 
         <div className='mx-4 mb-4 rounded-lg border border-bordersubtle'>
           {/* Tabs */}
