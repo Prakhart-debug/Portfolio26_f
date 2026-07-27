@@ -17,17 +17,6 @@
 * **emailjs**
   * without having a backend yo hook up to, i need a way to send emails to myself from my portfolio. I've been recommended emailjs by several fellow developers and figured id give it a shot. It works as intended and makes things easier.
 
-## Challenges
-
-Some challenges presented themselves throughout the project and it was a lot of fun to figure them out.
-
-**Trouble with interest hover cards**
-One of the more time consuming struggles was getting my interest hover cards to stay in the middle of the screen while on mobile. I looked at the problem and broke it down into steps. My interest content was stored in a interestsData.js file and i was mapping over them. Allowing me to have less DRY'ness throughout my code, and being able to quickly change and/or update the content.
-I needed to target specific elements of the mapped array and apply different CSS to them. How can i do this? Well, i broke the problem into smaller bite sized chunks and slowly chipped away at them.
-I knew i needed to watch for the index of the elements that were being mapped, and apply conditional styling to said elements. Once i gained control of the index, i realized i could apply conditionals within tailwind! So i did exactly that and managed to get everything working as intended.
-
-**Absolute positioning of my header**
-This one was fun! I had to really spend the time and dial in all the appropriate styling for the balls within my framed header section. Working on making it responsive on mobile and getting the positioning just right to make it work.
 
 ## Conclusion
 This was a fun project, and i really enjoyed all aspects of it, from the design of it to the coding of it. It helped solidify my CSS and React knowledge and future projects will continue to solidify it further.
