@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import scytheLeft from '../../../public/scythe left.svg'
-import scytheRight from '../../../public/scythe right.svg'
+import scytheLeft from '../../../public/scythe left.svg?url'
+import scytheRight from '../../../public/scythe right.svg?url'
 
 const Footer = () => {
   return (
@@ -13,12 +12,12 @@ const Footer = () => {
         </p>
         <img src={scytheRight} alt="" className="w-10 md:w-20" />
       </div>
-      <Link
-        to="/icons"
+      <a
+        href="/icons"
         className="absolute right-4 bottom-4 text-xs px-2 py-1 border border-bordersubtle rounded-md text-skin-muted hover:border-bordermain hover:text-skin-accent transition-all duration-200"
       >
         Icons
-      </Link>
+      </a>
     </div>
   )
 }

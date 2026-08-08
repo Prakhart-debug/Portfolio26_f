@@ -27,9 +27,9 @@ const Projects = () => {
 			id='projects'
 			className='flex  flex-col items-center justify-center md:my-48'
 		>
-			<h3 className='mx-auto my-10  text-6xl tracking-wider text-skin-accent lg:mb-20 lg:text-9xl'>
+			<h2 className='mx-auto my-10  text-6xl tracking-wider text-skin-accent lg:mb-20 lg:text-9xl'>
 				Projects
-			</h3>
+			</h2>
 
 			{/* Category filter pills */}
 			<div className='mx-auto mb-10 flex w-full max-w-4xl flex-wrap items-center justify-center gap-2 px-6'>

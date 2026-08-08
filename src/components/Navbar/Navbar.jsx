@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { MenuToggle } from './menuToggle'
 import { motion } from 'framer-motion'
 import Socials from './Navsocials'
-import Logo from '/public/BF Logo Final.png'
+import Logo from '/public/BF Logo Final.png?url'
 import { useTheme } from '../../ThemeContext'
 
 const Navbar = () => {
@@ -44,7 +44,7 @@ const Navbar = () => {
         <ul className='ml-20 hidden w-1/4 items-center justify-between font-paragraph text-2xl text-skin-base lg:flex'>
           <li className='px-4'>
             <a href='#home'>
-              <img className='md:w-10' src={Logo} alt='logo' />
+              <img className='w-10 max-w-none' src={Logo} alt='logo' />
             </a>
           </li>
           {['about', 'skills', 'projects', 'contact'].map(link => (

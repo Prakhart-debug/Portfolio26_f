@@ -32,7 +32,7 @@ const ProjectCard = ({ name, languages, site, siteicon, repoicon, code, index, p
 </div>
 
         <div className='flex items-start justify-between gap-3 px-4 pt-4 pb-2'>
-          <h4 className='text-xl md:text-2xl font-paragraph text-skin-base leading-snug'>{name}</h4>
+          <h3 className='text-xl md:text-2xl font-paragraph text-skin-base leading-snug'>{name}</h3>
           {category && (
             <span className='shrink-0 mt-1 text-xxs md:text-xs px-2 py-1 rounded-full bg-skin-muted text-skin-accent border border-bordersubtle whitespace-nowrap'>
               {category}

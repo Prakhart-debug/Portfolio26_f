@@ -1,6 +1,6 @@
 import React from 'react'
 import Aboutbio from './Aboutbio'
-import Portrait from '/public/portrait.png'
+import Portrait from '/public/portrait.png?url'
 
 const About = () => {
 	return (
@@ -19,7 +19,7 @@ const About = () => {
 
 				<img
 					src={Portrait}
-					alt=''
+					alt='Portrait of Prakhar Tripathi'
 					className='mx-auto my-10 w-1/2 md:w-1/3 lg:w-1/4 
              					rounded-full border-4 border-skin-accent 
              					shadow-[0_0px_50px_-12px_rgba(255,255,255,0.3)]'

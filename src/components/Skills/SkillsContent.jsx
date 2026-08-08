@@ -1,28 +1,28 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import vscode from '../../assets/site-icons/vscode.svg'
-import tailwind from '../../assets/site-icons/tailwind.svg'
-import react from '../../assets/site-icons/react.svg'
-import javascript from '../../assets/site-icons/javascript.svg'
-import html from '../../assets/site-icons/html.svg'
-import gitcircle from '../../assets/site-icons/git-circle.svg'
-import figma from '../../assets/site-icons/figma.svg'
-import css from '../../assets/site-icons/css.svg'
-import next from '../../assets/site-icons/next.svg'
-import firebase from '../../assets/site-icons/firebase.svg'
-import python from '../../assets/site-icons/python.svg'
-import cpp from '../../assets/site-icons/cpp_img.svg'
-import excel from '../../assets/site-icons/excel.svg'
-import powerbi from '../../assets/site-icons/powerbi.svg'
-import flutter from '../../assets/site-icons/flutter.svg'
-import docker from '../../assets/site-icons/docker.svg'
-import mongodb from '../../assets/site-icons/mongodb.svg'
-import snowflake from '../../assets/site-icons/Snowflake.svg'
-import swift from '../../assets/site-icons/swift.svg'
-import photoshop from '../../assets/site-icons/photoshop.svg'
-import illustrator from '../../assets/site-icons/illustrator.svg'
-import audacity from '../../assets/site-icons/audacity.svg'
-import fcp from '../../assets/site-icons/fcp.svg'
+import vscode from '../../assets/site-icons/vscode.svg?url'
+import tailwind from '../../assets/site-icons/tailwind.svg?url'
+import react from '../../assets/site-icons/react.svg?url'
+import javascript from '../../assets/site-icons/javascript.svg?url'
+import html from '../../assets/site-icons/html.svg?url'
+import gitcircle from '../../assets/site-icons/git-circle.svg?url'
+import figma from '../../assets/site-icons/figma.svg?url'
+import css from '../../assets/site-icons/css.svg?url'
+import next from '../../assets/site-icons/next.svg?url'
+import firebase from '../../assets/site-icons/firebase.svg?url'
+import python from '../../assets/site-icons/python.svg?url'
+import cpp from '../../assets/site-icons/cpp_img.svg?url'
+import excel from '../../assets/site-icons/excel.svg?url'
+import powerbi from '../../assets/site-icons/powerbi.svg?url'
+import flutter from '../../assets/site-icons/flutter.svg?url'
+import docker from '../../assets/site-icons/docker.svg?url'
+import mongodb from '../../assets/site-icons/mongodb.svg?url'
+import snowflake from '../../assets/site-icons/Snowflake.svg?url'
+import swift from '../../assets/site-icons/swift.svg?url'
+import photoshop from '../../assets/site-icons/photoshop.svg?url'
+import illustrator from '../../assets/site-icons/illustrator.svg?url'
+import audacity from '../../assets/site-icons/audacity.svg?url'
+import fcp from '../../assets/site-icons/fcp.svg?url'
 
 const skills = [
   { image: python, name: 'Python' },
@@ -59,9 +59,9 @@ const item = {
 const SkillsContent = () => {
   return (
     <div className='flex flex-col items-center justify-center md:h-full'>
-      <h3 className='my-10 w-full text-center tracking-wider px-5 text-6xl text-skin-accent sm:text-7xl lg:text-9xl'>
+      <h2 className='my-10 w-full text-center tracking-wider px-5 text-6xl text-skin-accent sm:text-7xl lg:text-9xl'>
         Things I'm good at!
-      </h3>
+      </h2>
       <motion.div
         className='grid grid-cols-3 md:grid-cols-5 place-content-center content-center gap-8 px-8 md:gap-16 my-10'
         variants={container}

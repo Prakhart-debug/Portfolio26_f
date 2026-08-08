@@ -1,4 +1,5 @@
-User-agent: * 
-Allow: / 
-Disallow: /static/ 
+User-agent: *
+Allow: /
 Disallow: /.netlify/
+
+Sitemap: https://praxy6.netlify.app/sitemap-index.xml

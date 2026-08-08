@@ -1,0 +1,77 @@
+---
+import '../index.css'
+
+interface Props {
+  title?: string
+  description?: string
+  path?: string
+}
+
+const {
+  title = 'Prakhar Tripathi — Software Engineer',
+  description = 'Portfolio of Prakhar Tripathi, a software engineer working across full-stack products and applied ML — 21 shipped projects spanning computer vision, agentic AI, systems programming, and cloud infrastructure.',
+  path = '/',
+} = Astro.props
+
+const canonicalURL = new URL(path, Astro.site)
+const ogImageURL = new URL('/BF Logo Final.png', Astro.site)
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="/BF Logo Final.png" />
+		<link rel="canonical" href={canonicalURL} />
+
+		<title>{title}</title>
+		<meta name="description" content={description} />
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:image" content={ogImageURL} />
+		<meta property="og:site_name" content="Prakhar Tripathi" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImageURL} />
+
+		<!-- Structured data -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'Person',
+			name: 'Prakhar Tripathi',
+			url: Astro.site?.toString(),
+			jobTitle: 'Software Engineer',
+			sameAs: [
+				'https://github.com/Prakhart-debug',
+				'https://www.linkedin.com/in/prakhar-tripathi-9729a7141/',
+			],
+		})} />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Neuton:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script is:inline>
+			// Set data-theme before hydration so islands never flash the wrong theme.
+			(function () {
+				var stored = localStorage.getItem('theme')
+				var theme = stored || 'dark'
+				document.documentElement.setAttribute('data-theme', theme)
+			})()
+		</script>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>

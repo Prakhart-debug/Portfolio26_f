@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { motion } from 'framer-motion'
-import scythe from '../../../public/ghilbi.png'
+import scythe from '../../../public/ghilbi.png?url'
 
 const Headercontent = () => {
   const interests = [

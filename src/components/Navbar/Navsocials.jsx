@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
-import Git from '../../assets/site-icons/git.png'
-import Download from '../../assets/site-icons/download.png'
-import Linkedin from '../../assets/site-icons/linkedin.png'
+import Git from '../../assets/site-icons/git.png?url'
+import Download from '../../assets/site-icons/download.png?url'
+import Linkedin from '../../assets/site-icons/linkedin.png?url'
 import PrakharResume from '../../../public/resume1.pdf'
 
 const wobble = {

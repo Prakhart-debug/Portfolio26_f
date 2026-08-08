@@ -21,7 +21,7 @@ const ProjectMiniCard = ({ name, category, languages, projectDescription, site, 
 
       <div className='p-3'>
         <div className='flex items-start justify-between gap-2'>
-          <h5 className='text-sm md:text-base text-skin-base leading-snug'>{name}</h5>
+          <h3 className='text-sm md:text-base text-skin-base leading-snug'>{name}</h3>
         </div>
         <p className='mt-1 text-xxs md:text-xs text-skin-accent uppercase tracking-wide'>{category}</p>
 
