@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import { createPortal } from 'react-dom'
 import { MenuToggle } from './menuToggle'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import Socials from './Navsocials'
 import Logo from '/public/BF Logo Final.png?url'
 import { useTheme } from '../../ThemeContext'
@@ -61,19 +62,51 @@ const Navbar = () => {
 
         <Socials />
 
-        {toggleMenu && (
-          <div className='fixed top-0 left-0 z-40 mx-auto my-0 h-full w-screen flex-row-reverse items-center justify-center bg-skin-bg py-2 text-lg'>
-            <ul className='mx-auto my-6 flex h-5/6 w-1/4 flex-col items-center justify-evenly font-paragraph text-2xl text-skin-base'>
-              {['about', 'skills', 'projects', 'contact'].map(link => (
-                <li key={link} className='px-4 hover:text-skin-accent'>
-                  <a href={`#${link}`} onClick={() => setToggleMenu(false)} className='capitalize'>
-                    {link.charAt(0).toUpperCase() + link.slice(1)}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+        {typeof document !== 'undefined' &&
+          createPortal(
+            <AnimatePresence>
+              {toggleMenu && (
+                <motion.div
+                  className='fixed inset-0 z-[60] flex flex-col items-center justify-center gap-2 bg-skin-bg lg:hidden'
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <button
+                    onClick={() => setToggleMenu(false)}
+                    aria-label='Close menu'
+                    className='absolute right-6 top-6 flex h-10 w-10 items-center justify-center rounded-full border border-bordersubtle bg-skin-muted text-skin-accent outline-none transition-colors duration-200 hover:border-bordermain focus-visible:ring-2 focus-visible:ring-skin-accent'
+                  >
+                    <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round'>
+                      <line x1='4' y1='4' x2='20' y2='20' />
+                      <line x1='20' y1='4' x2='4' y2='20' />
+                    </svg>
+                  </button>
+
+                  <ul className='flex w-full max-w-xs flex-col items-center gap-8 font-paragraph text-3xl text-skin-base'>
+                    {['about', 'skills', 'projects', 'contact'].map((link, i) => (
+                      <motion.li
+                        key={link}
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.25, delay: 0.05 * i }}
+                      >
+                        <a
+                          href={`#${link}`}
+                          onClick={() => setToggleMenu(false)}
+                          className='capitalize transition-colors duration-200 hover:text-skin-accent'
+                        >
+                          {link.charAt(0).toUpperCase() + link.slice(1)}
+                        </a>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </motion.div>
+              )}
+            </AnimatePresence>,
+            document.body
+          )}
       </div>
     </motion.nav>
   )

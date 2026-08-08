@@ -21,7 +21,11 @@ const variants = {
 }
 
 export const MenuToggle = ({ toggle, isOpen }) => (
-	<button onClick={toggle} className='mr-6 z-50 lg:hidden'>
+	<button
+		onClick={toggle}
+		aria-label='Open menu'
+		className='z-50 mr-6 flex h-10 w-10 items-center justify-center rounded-full border border-bordersubtle bg-skin-muted outline-none transition-colors duration-200 hover:border-bordermain focus-visible:ring-2 focus-visible:ring-skin-accent lg:hidden'
+	>
 		<motion.svg
 			width='23'
 			height='23'

@@ -24,13 +24,13 @@ const Headercontent = () => {
 
   return (
     <div className="w-full overflow-x-hidden">
-      <div className="flex flex-col items-start justify-start tracking-wider pl-6 md:pl-16">
-        <div className="flex w-full flex-col md:flex-row items-start justify-between text-skin-base md:my-48 md:h-5/6">
+      <div className="flex flex-col items-center md:items-start justify-start tracking-wider px-6 md:pl-16 md:pr-0">
+        <div className="flex w-full flex-col md:flex-row items-center md:items-start justify-between text-skin-base md:my-48 md:h-5/6">
 
           {/* LEFT SIDE */}
-          <div className="flex flex-col items-start justify-start md:w-1/2">
+          <div className="flex flex-col items-center md:items-start justify-start md:w-1/2">
             <motion.h1
-              className="my-10 text-left text-6xl sm:text-8xl lg:text-10xl font-namefont text-skin-accent"
+              className="my-10 text-center md:text-left text-6xl sm:text-8xl lg:text-10xl font-namefont text-skin-accent"
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
@@ -39,16 +39,16 @@ const Headercontent = () => {
               <br />&nbsp;&nbsp;&nbsp;Tripathi
             </motion.h1>
             <motion.div
-              className="flex flex-col items-start justify-start text-left pl-6 sm:pl-12 font-paragraph text-lg sm:text-2xl lg:text-3xl tracking-wide text-skin-base"
+              className="flex flex-col items-center md:items-start text-center md:text-left pl-0 sm:pl-12 font-paragraph text-lg sm:text-2xl lg:text-3xl tracking-wide text-skin-base"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
               <p className="w-full">I'm a Front End Developer</p>
-              <div className="flex w-full flex-col justify-start overflow-hidden text-left">
-                <div className="flex items-center justify-start">
+              <div className="flex w-full flex-col justify-center md:justify-start overflow-hidden text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start">
                   <p className="mr-2">and </p>
-                  <div className="text-left md:w-2/3">
+                  <div className="text-center md:text-left md:w-2/3">
                     <motion.div
                       className="text-skin-accent"
                       key={currentInterest}
