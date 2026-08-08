@@ -22,10 +22,10 @@ const wobble = {
 
 const Navsocials = () => {
 	return (
-		<div className='mr-40 flex lg:mr-20  lg:flex'>
+		<div className='flex items-center lg:mr-20'>
 			<a href={PrakharResume} download>
 				<motion.img
-					className='px-4'
+					className='h-6 w-6 max-w-none px-2 md:h-7 md:w-7 md:px-4'
 					whileHover={wobble}
 					src={Download}
 					alt='download logo'
@@ -34,7 +34,7 @@ const Navsocials = () => {
 			</a>
 			<a href='https://github.com/Prakhart-debug' target='_blank'>
 				<motion.img
-					className='px-4 '
+					className='h-6 w-6 max-w-none px-2 md:h-7 md:w-7 md:px-4'
 					whileHover={wobble}
 					src={Git}
 					alt='Github Logo'
@@ -43,7 +43,7 @@ const Navsocials = () => {
 			</a>
 			<a href='https://www.linkedin.com/in/prakhar-tripathi-9729a7141/' target='_blank'>
 				<motion.img
-					className='px-4 '
+					className='h-6 w-6 max-w-none px-2 md:h-7 md:w-7 md:px-4'
 					whileHover={wobble}
 					src={Linkedin}
 					alt='Linkedin Logo'
